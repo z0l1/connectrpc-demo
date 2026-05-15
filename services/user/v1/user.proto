@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package services.user.v1;
+
+import "buf/validate/validate.proto";
+
+message GetUserByIdRequest {
+	int64 id = 1;
+}
+
+message GetUserByUsernameRequest {
+	string username = 1 [(buf.validate.field).string = {
+		min_len: 1,
+		max_len: 10
+	}];
+}
+
+message GetUserByIdResponse {
+	int64 id = 1;
+	string username = 2;
+	string email = 3;
+	string password = 4;
+}
+
+message GetUserByUsernameResponse {
+	int64 id = 1;
+	string username = 2;
+	string email = 3;
+	string password = 4;
+}
+
+service UserService {
+	rpc GetUserById(GetUserByIdRequest) returns (GetUserByIdResponse) {}
+	rpc GetUserByUsername(GetUserByUsernameRequest) returns (GetUserByUsernameResponse) {}
+}
