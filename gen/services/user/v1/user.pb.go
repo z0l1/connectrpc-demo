@@ -268,8 +268,8 @@ const file_services_user_v1_user_proto_rawDesc = "" +
 	"\bpassword\x18\x04 \x01(\tR\bpassword2\xdb\x01\n" +
 	"\vUserService\x12\\\n" +
 	"\vGetUserById\x12$.services.user.v1.GetUserByIdRequest\x1a%.services.user.v1.GetUserByIdResponse\"\x00\x12n\n" +
-	"\x11GetUserByUsername\x12*.services.user.v1.GetUserByUsernameRequest\x1a+.services.user.v1.GetUserByUsernameResponse\"\x00B\xbc\x01\n" +
-	"\x14com.services.user.v1B\tUserProtoP\x01Z7github.com/z0l1/connectrpc-demo/services/user/v1;userv1\xa2\x02\x03SUX\xaa\x02\x10Services.User.V1\xca\x02\x10Services\\User\\V1\xe2\x02\x1cServices\\User\\V1\\GPBMetadata\xea\x02\x12Services::User::V1b\x06proto3"
+	"\x11GetUserByUsername\x12*.services.user.v1.GetUserByUsernameRequest\x1a+.services.user.v1.GetUserByUsernameResponse\"\x00B\xc0\x01\n" +
+	"\x14com.services.user.v1B\tUserProtoP\x01Z;github.com/z0l1/connectrpc-demo/gen/services/user/v1;userv1\xa2\x02\x03SUX\xaa\x02\x10Services.User.V1\xca\x02\x10Services\\User\\V1\xe2\x02\x1cServices\\User\\V1\\GPBMetadata\xea\x02\x12Services::User::V1b\x06proto3"
 
 var (
 	file_services_user_v1_user_proto_rawDescOnce sync.Once
