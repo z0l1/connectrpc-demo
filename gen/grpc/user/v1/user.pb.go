@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.11
 // 	protoc        (unknown)
-// source: services/user/v1/user.proto
+// source: grpc/user/v1/user.proto
 
 package userv1
 
@@ -31,7 +31,7 @@ type GetUserByIdRequest struct {
 
 func (x *GetUserByIdRequest) Reset() {
 	*x = GetUserByIdRequest{}
-	mi := &file_services_user_v1_user_proto_msgTypes[0]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +43,7 @@ func (x *GetUserByIdRequest) String() string {
 func (*GetUserByIdRequest) ProtoMessage() {}
 
 func (x *GetUserByIdRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_user_v1_user_proto_msgTypes[0]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +56,7 @@ func (x *GetUserByIdRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetUserByIdRequest.ProtoReflect.Descriptor instead.
 func (*GetUserByIdRequest) Descriptor() ([]byte, []int) {
-	return file_services_user_v1_user_proto_rawDescGZIP(), []int{0}
+	return file_grpc_user_v1_user_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GetUserByIdRequest) GetId() int64 {
@@ -75,7 +75,7 @@ type GetUserByUsernameRequest struct {
 
 func (x *GetUserByUsernameRequest) Reset() {
 	*x = GetUserByUsernameRequest{}
-	mi := &file_services_user_v1_user_proto_msgTypes[1]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -87,7 +87,7 @@ func (x *GetUserByUsernameRequest) String() string {
 func (*GetUserByUsernameRequest) ProtoMessage() {}
 
 func (x *GetUserByUsernameRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_user_v1_user_proto_msgTypes[1]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -100,7 +100,7 @@ func (x *GetUserByUsernameRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetUserByUsernameRequest.ProtoReflect.Descriptor instead.
 func (*GetUserByUsernameRequest) Descriptor() ([]byte, []int) {
-	return file_services_user_v1_user_proto_rawDescGZIP(), []int{1}
+	return file_grpc_user_v1_user_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GetUserByUsernameRequest) GetUsername() string {
@@ -122,7 +122,7 @@ type GetUserByIdResponse struct {
 
 func (x *GetUserByIdResponse) Reset() {
 	*x = GetUserByIdResponse{}
-	mi := &file_services_user_v1_user_proto_msgTypes[2]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -134,7 +134,7 @@ func (x *GetUserByIdResponse) String() string {
 func (*GetUserByIdResponse) ProtoMessage() {}
 
 func (x *GetUserByIdResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_user_v1_user_proto_msgTypes[2]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -147,7 +147,7 @@ func (x *GetUserByIdResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetUserByIdResponse.ProtoReflect.Descriptor instead.
 func (*GetUserByIdResponse) Descriptor() ([]byte, []int) {
-	return file_services_user_v1_user_proto_rawDescGZIP(), []int{2}
+	return file_grpc_user_v1_user_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *GetUserByIdResponse) GetId() int64 {
@@ -190,7 +190,7 @@ type GetUserByUsernameResponse struct {
 
 func (x *GetUserByUsernameResponse) Reset() {
 	*x = GetUserByUsernameResponse{}
-	mi := &file_services_user_v1_user_proto_msgTypes[3]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -202,7 +202,7 @@ func (x *GetUserByUsernameResponse) String() string {
 func (*GetUserByUsernameResponse) ProtoMessage() {}
 
 func (x *GetUserByUsernameResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_user_v1_user_proto_msgTypes[3]
+	mi := &file_grpc_user_v1_user_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -215,7 +215,7 @@ func (x *GetUserByUsernameResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetUserByUsernameResponse.ProtoReflect.Descriptor instead.
 func (*GetUserByUsernameResponse) Descriptor() ([]byte, []int) {
-	return file_services_user_v1_user_proto_rawDescGZIP(), []int{3}
+	return file_grpc_user_v1_user_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *GetUserByUsernameResponse) GetId() int64 {
@@ -246,11 +246,11 @@ func (x *GetUserByUsernameResponse) GetPassword() string {
 	return ""
 }
 
-var File_services_user_v1_user_proto protoreflect.FileDescriptor
+var File_grpc_user_v1_user_proto protoreflect.FileDescriptor
 
-const file_services_user_v1_user_proto_rawDesc = "" +
+const file_grpc_user_v1_user_proto_rawDesc = "" +
 	"\n" +
-	"\x1bservices/user/v1/user.proto\x12\x10services.user.v1\x1a\x1bbuf/validate/validate.proto\"$\n" +
+	"\x17grpc/user/v1/user.proto\x12\fgrpc.user.v1\x1a\x1bbuf/validate/validate.proto\"$\n" +
 	"\x12GetUserByIdRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\"A\n" +
 	"\x18GetUserByUsernameRequest\x12%\n" +
@@ -265,36 +265,36 @@ const file_services_user_v1_user_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x1a\n" +
 	"\busername\x18\x02 \x01(\tR\busername\x12\x14\n" +
 	"\x05email\x18\x03 \x01(\tR\x05email\x12\x1a\n" +
-	"\bpassword\x18\x04 \x01(\tR\bpassword2\xdb\x01\n" +
-	"\vUserService\x12\\\n" +
-	"\vGetUserById\x12$.services.user.v1.GetUserByIdRequest\x1a%.services.user.v1.GetUserByIdResponse\"\x00\x12n\n" +
-	"\x11GetUserByUsername\x12*.services.user.v1.GetUserByUsernameRequest\x1a+.services.user.v1.GetUserByUsernameResponse\"\x00B\xc0\x01\n" +
-	"\x14com.services.user.v1B\tUserProtoP\x01Z;github.com/z0l1/connectrpc-demo/gen/services/user/v1;userv1\xa2\x02\x03SUX\xaa\x02\x10Services.User.V1\xca\x02\x10Services\\User\\V1\xe2\x02\x1cServices\\User\\V1\\GPBMetadata\xea\x02\x12Services::User::V1b\x06proto3"
+	"\bpassword\x18\x04 \x01(\tR\bpassword2\xcb\x01\n" +
+	"\vUserService\x12T\n" +
+	"\vGetUserById\x12 .grpc.user.v1.GetUserByIdRequest\x1a!.grpc.user.v1.GetUserByIdResponse\"\x00\x12f\n" +
+	"\x11GetUserByUsername\x12&.grpc.user.v1.GetUserByUsernameRequest\x1a'.grpc.user.v1.GetUserByUsernameResponse\"\x00B\xa8\x01\n" +
+	"\x10com.grpc.user.v1B\tUserProtoP\x01Z7github.com/z0l1/connectrpc-demo/gen/grpc/user/v1;userv1\xa2\x02\x03GUX\xaa\x02\fGrpc.User.V1\xca\x02\fGrpc\\User\\V1\xe2\x02\x18Grpc\\User\\V1\\GPBMetadata\xea\x02\x0eGrpc::User::V1b\x06proto3"
 
 var (
-	file_services_user_v1_user_proto_rawDescOnce sync.Once
-	file_services_user_v1_user_proto_rawDescData []byte
+	file_grpc_user_v1_user_proto_rawDescOnce sync.Once
+	file_grpc_user_v1_user_proto_rawDescData []byte
 )
 
-func file_services_user_v1_user_proto_rawDescGZIP() []byte {
-	file_services_user_v1_user_proto_rawDescOnce.Do(func() {
-		file_services_user_v1_user_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_services_user_v1_user_proto_rawDesc), len(file_services_user_v1_user_proto_rawDesc)))
+func file_grpc_user_v1_user_proto_rawDescGZIP() []byte {
+	file_grpc_user_v1_user_proto_rawDescOnce.Do(func() {
+		file_grpc_user_v1_user_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_grpc_user_v1_user_proto_rawDesc), len(file_grpc_user_v1_user_proto_rawDesc)))
 	})
-	return file_services_user_v1_user_proto_rawDescData
+	return file_grpc_user_v1_user_proto_rawDescData
 }
 
-var file_services_user_v1_user_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_services_user_v1_user_proto_goTypes = []any{
-	(*GetUserByIdRequest)(nil),        // 0: services.user.v1.GetUserByIdRequest
-	(*GetUserByUsernameRequest)(nil),  // 1: services.user.v1.GetUserByUsernameRequest
-	(*GetUserByIdResponse)(nil),       // 2: services.user.v1.GetUserByIdResponse
-	(*GetUserByUsernameResponse)(nil), // 3: services.user.v1.GetUserByUsernameResponse
+var file_grpc_user_v1_user_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_grpc_user_v1_user_proto_goTypes = []any{
+	(*GetUserByIdRequest)(nil),        // 0: grpc.user.v1.GetUserByIdRequest
+	(*GetUserByUsernameRequest)(nil),  // 1: grpc.user.v1.GetUserByUsernameRequest
+	(*GetUserByIdResponse)(nil),       // 2: grpc.user.v1.GetUserByIdResponse
+	(*GetUserByUsernameResponse)(nil), // 3: grpc.user.v1.GetUserByUsernameResponse
 }
-var file_services_user_v1_user_proto_depIdxs = []int32{
-	0, // 0: services.user.v1.UserService.GetUserById:input_type -> services.user.v1.GetUserByIdRequest
-	1, // 1: services.user.v1.UserService.GetUserByUsername:input_type -> services.user.v1.GetUserByUsernameRequest
-	2, // 2: services.user.v1.UserService.GetUserById:output_type -> services.user.v1.GetUserByIdResponse
-	3, // 3: services.user.v1.UserService.GetUserByUsername:output_type -> services.user.v1.GetUserByUsernameResponse
+var file_grpc_user_v1_user_proto_depIdxs = []int32{
+	0, // 0: grpc.user.v1.UserService.GetUserById:input_type -> grpc.user.v1.GetUserByIdRequest
+	1, // 1: grpc.user.v1.UserService.GetUserByUsername:input_type -> grpc.user.v1.GetUserByUsernameRequest
+	2, // 2: grpc.user.v1.UserService.GetUserById:output_type -> grpc.user.v1.GetUserByIdResponse
+	3, // 3: grpc.user.v1.UserService.GetUserByUsername:output_type -> grpc.user.v1.GetUserByUsernameResponse
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -302,26 +302,26 @@ var file_services_user_v1_user_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_services_user_v1_user_proto_init() }
-func file_services_user_v1_user_proto_init() {
-	if File_services_user_v1_user_proto != nil {
+func init() { file_grpc_user_v1_user_proto_init() }
+func file_grpc_user_v1_user_proto_init() {
+	if File_grpc_user_v1_user_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_services_user_v1_user_proto_rawDesc), len(file_services_user_v1_user_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_grpc_user_v1_user_proto_rawDesc), len(file_grpc_user_v1_user_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_services_user_v1_user_proto_goTypes,
-		DependencyIndexes: file_services_user_v1_user_proto_depIdxs,
-		MessageInfos:      file_services_user_v1_user_proto_msgTypes,
+		GoTypes:           file_grpc_user_v1_user_proto_goTypes,
+		DependencyIndexes: file_grpc_user_v1_user_proto_depIdxs,
+		MessageInfos:      file_grpc_user_v1_user_proto_msgTypes,
 	}.Build()
-	File_services_user_v1_user_proto = out.File
-	file_services_user_v1_user_proto_goTypes = nil
-	file_services_user_v1_user_proto_depIdxs = nil
+	File_grpc_user_v1_user_proto = out.File
+	file_grpc_user_v1_user_proto_goTypes = nil
+	file_grpc_user_v1_user_proto_depIdxs = nil
 }

@@ -7,8 +7,8 @@ import (
 
 	"connectrpc.com/connect"
 	"connectrpc.com/validate"
-	userv1 "github.com/z0l1/connectrpc-demo/gen/services/user/v1"
-	"github.com/z0l1/connectrpc-demo/gen/services/user/v1/userv1connect"
+	userv1 "github.com/z0l1/connectrpc-demo/gen/grpc/user/v1"
+	"github.com/z0l1/connectrpc-demo/gen/grpc/user/v1/userv1connect"
 )
 
 type UserServer struct {
