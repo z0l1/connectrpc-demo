@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"fmt"
+	"log/slog"
 	"net/http"
 
 	"connectrpc.com/connect"
@@ -14,9 +14,11 @@ import (
 type UserServer struct {
 }
 
-func (s *UserServer) GetUserById(context.Context, *userv1.GetUserByIdRequest) (*userv1.GetUserByIdResponse, error) {
+func (s *UserServer) GetUserById(c context.Context, req *userv1.GetUserByIdRequest) (*userv1.GetUserByIdResponse, error) {
+	slog.Info("GetUserById", slog.Int64("id", req.Id))
+
 	resp := userv1.GetUserByIdResponse{
-		Id:       1,
+		Id:       req.Id,
 		Username: "anyad",
 		Email:    "any@ad",
 		Password: "redacted",
@@ -25,16 +27,17 @@ func (s *UserServer) GetUserById(context.Context, *userv1.GetUserByIdRequest) (*
 	return &resp, nil
 }
 
-func (s *UserServer) GetUserByUsername(context.Context, *userv1.GetUserByUsernameRequest) (*userv1.GetUserByUsernameResponse, error) {
+func (s *UserServer) GetUserByUsername(c context.Context, req *userv1.GetUserByUsernameRequest) (*userv1.GetUserByUsernameResponse, error) {
+	slog.Info("GetUserByUsername", slog.String("username", req.Username))
+
 	resp := userv1.GetUserByUsernameResponse{
 		Id:       1,
-		Username: "anyad",
+		Username: req.Username,
 		Email:    "any@ad",
 		Password: "redacted",
 	}
 
 	return &resp, nil
-
 }
 
 func main() {
@@ -47,7 +50,7 @@ func main() {
 		connect.WithInterceptors(validate.NewInterceptor()),
 	)
 
-	fmt.Println("path for user service", path)
+	slog.Info("grpc user service initiated", slog.String("path", path))
 
 	mux.Handle(path, handler)
 
@@ -55,11 +58,19 @@ func main() {
 	p.SetHTTP1(true)
 	// Use h2c so we can serve HTTP/2 without TLS.
 	p.SetUnencryptedHTTP2(true)
+
+	addr := "localhost:8080"
 	s := http.Server{
-		Addr:      "localhost:8080",
+		Addr:      addr,
 		Handler:   mux,
 		Protocols: p,
 	}
-	s.ListenAndServe()
+	slog.Info("server listening", slog.String("addr", addr))
 
+	err := s.ListenAndServe()
+
+	slog.Info("server shutdown")
+	if err != nil {
+		slog.Info("server error", slog.String("err", err.Error()))
+	}
 }
