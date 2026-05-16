@@ -7,4 +7,4 @@ echo "BUF LINT"
 buf lint
 
 echo "BUF GEN"
-buf generate
+buf generate --include-imports

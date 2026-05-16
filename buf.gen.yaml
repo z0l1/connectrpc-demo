@@ -8,6 +8,16 @@ plugins:
       opt:
           - paths=source_relative
           - simple
+
+    # Generates standard Protobuf messages (_pb.ts)
+    - local: protoc-gen-es
+      out: web/app/web-client/src/lib/client
+      opt: target=ts
+    # Generates Connect RPC clients (_connect.ts)
+    - local: protoc-gen-connect-es
+      out: web/app/web-client/src/lib/client
+      opt: target=ts
+
 managed:
     enabled: true
     override:
