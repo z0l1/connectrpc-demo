@@ -11,11 +11,11 @@ plugins:
 
     # Generates standard Protobuf messages (_pb.ts)
     - local: protoc-gen-es
-      out: web/app/web-client/src/lib/client
+      out: web/app/web-client/src/lib/client/gen
       opt: target=ts
     # Generates Connect RPC clients (_connect.ts)
     - local: protoc-gen-connect-es
-      out: web/app/web-client/src/lib/client
+      out: web/app/web-client/src/lib/client/gen
       opt: target=ts
 
 managed:
