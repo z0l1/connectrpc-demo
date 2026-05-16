@@ -1,10 +1,9 @@
 <script lang="ts">
+	import { bigintReplacer } from "$lib/utils/json-replacer";
 	import type { PageServerData } from "./$types";
 
 	const { data }: { data: PageServerData } = $props();
 </script>
-
-{JSON.stringify(data)}
 
 <form method="GET" class="mt-10 p-4 bg-blue-100 flex flex-col gap-4">
 	<p>search for a user</p>
@@ -28,3 +27,5 @@
 		<button type="submit">search</button>
 	</div>
 </form>
+
+<pre class="p-2 bg-blue-200">{JSON.stringify(data, bigintReplacer, 2)}</pre>
