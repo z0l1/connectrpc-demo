@@ -14,16 +14,22 @@ go get -tool google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go get -tool connectrpc.com/connect/cmd/protoc-gen-connect-go@latest
 ```
 
-2. install node deps
+2. install global node deps
 
 ```
 npm install -g @bufbuild/protoc-gen-es @connectrpc/protoc-gen-connect-es @connectrpc/connect @connectrpc/validate
 ```
 
-3. make `buf.yaml` via `buf config init`
+3. install project node deps
 
-4. make `buf.gen.yaml`
+```
+npm i @connectrpc/connect @connectrpc/connect-node @connectrpc/connect-web
+```
 
-5. `scripts/bufgen.sh`
+4. make `buf.yaml` via `buf config init`
 
-6. win
+5. make `buf.gen.yaml`
+
+6. `scripts/bufgen.sh`
+
+7. win
