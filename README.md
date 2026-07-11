@@ -1,4 +1,6 @@
-### preparation steps
+## Learning how to use ConnectRPC
+
+### Preparation steps
 
 1. install go deps
 

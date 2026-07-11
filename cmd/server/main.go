@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"errors"
 	"log/slog"
 	"net/http"
 
@@ -17,6 +18,10 @@ type UserServer struct {
 func (s *UserServer) GetUserById(c context.Context, req *userv1.GetUserByIdRequest) (*userv1.GetUserByIdResponse, error) {
 	slog.Info("GetUserById", slog.Int64("id", req.Id))
 
+	if req.Id == 67 {
+		return nil, errors.New(":|")
+	}
+
 	resp := userv1.GetUserByIdResponse{
 		Id:       req.Id,
 		Username: "anyad",
@@ -29,6 +34,10 @@ func (s *UserServer) GetUserById(c context.Context, req *userv1.GetUserByIdReque
 
 func (s *UserServer) GetUserByUsername(c context.Context, req *userv1.GetUserByUsernameRequest) (*userv1.GetUserByUsernameResponse, error) {
 	slog.Info("GetUserByUsername", slog.String("username", req.Username))
+
+	if req.Username == "error" {
+		return nil, errors.New("so sad :(")
+	}
 
 	resp := userv1.GetUserByUsernameResponse{
 		Id:       1,
