@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@layer {
+	/* lets recreate basic h1 functionality that tailwind removed :D */
+	.app-title-1 {
+		@apply text-xl mb-2;
+	}
+
+	a {
+		@apply cursor-pointer underline;
+	}
+
+	button {
+		@apply cursor-pointer px-2 py-1 border border-black hover:bg-blue-200;
+	}
+}
